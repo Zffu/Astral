@@ -38,7 +38,7 @@ public class BasicBox implements Box {
 
     @Override
     public boolean process(double x, double y, double z) {
-        return (this.maxX - this.minX + x) + (this.maxY - this.minY + y) + (this.maxZ - this.minZ + z) >= 0;
+        return (x >= this.minX && y >= this.minY && z >= this.minZ && x <= this.maxX && y <= this.maxY && z <= this.maxZ);
     }
 
     @Override
